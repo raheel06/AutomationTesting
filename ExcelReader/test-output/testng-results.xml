@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="761" started-at="2018-11-29T07:18:14Z" finished-at="2018-11-29T07:18:15Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="761" started-at="2018-11-29T07:18:14Z" finished-at="2018-11-29T07:18:15Z">
+      <class name="readExcel">
+        <test-method status="PASS" signature="excel(java.lang.String, java.lang.String)[pri:0, instance:readExcel@8bd1b6a]" name="excel" duration-ms="64" started-at="2018-11-29T07:18:15Z" data-provider="getTestData" finished-at="2018-11-29T07:18:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[01_EstabLogin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- excel -->
+        <test-method status="PASS" signature="excel(java.lang.String, java.lang.String)[pri:0, instance:readExcel@8bd1b6a]" name="excel" duration-ms="46" started-at="2018-11-29T07:18:15Z" data-provider="getTestData" finished-at="2018-11-29T07:18:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[02_NormalEstabEntryPermitTourism_SingleEntry_30Days]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[New Tourism Entry Permit]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- excel -->
+      </class> <!-- readExcel -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
