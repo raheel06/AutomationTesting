@@ -3,11 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="readExcel">
+      <class name="com.test.excelDataProvider">
         <methods>
-          <include name="excel"/>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="NormalEstabEntryPermitTourism1"/>
+          <include name="afterMethod"/>
         </methods>
-      </class> <!-- readExcel -->
+      </class> <!-- com.test.excelDataProvider -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

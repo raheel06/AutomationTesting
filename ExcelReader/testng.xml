@@ -2,10 +2,18 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
   <test thread-count="5" name="Test">
+
+    <parameter name="url" value="https://ospqmgfe1.emaratech.ae/SmartChannels_Th/Login.aspx" />
+    <parameter name="username" value="Raheel" />
+	<parameter name="password" value="Rao" />
+
+<!-- 	<parameter name="startTestCaseRow" value="1" /> -->
+<!-- 	<parameter name="endTestCaseRow" value="3" /> -->
+
     <classes>
 	    <!--  <class name=".ExcelReader"/>  -->
     	<!--   <class name=".readExcel"/>  -->
-    	<class name=".reader"/>
+    	<class name="com.test.excelDataProvider"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

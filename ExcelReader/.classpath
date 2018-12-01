@@ -26,5 +26,20 @@
 	<classpathentry kind="lib" path="D:/AutomationTesting/HelpingArtifacts/libs/poi-ooxml-schemas-4.0.0.jar"/>
 	<classpathentry kind="lib" path="D:/AutomationTesting/HelpingArtifacts/libs/poi-scratchpad-4.0.0.jar"/>
 	<classpathentry kind="lib" path="D:/AutomationTesting/HelpingArtifacts/libs/xmlbeans-3.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationTesting/HelpingArtifacts/libs/Reports/extentreports-2.41.2.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationTesting/HelpingArtifacts/libs/Reports/ant-1.7.0.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationTesting/HelpingArtifacts/libs/Reports/ant-launcher-1.7.0.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationTesting/HelpingArtifacts/libs/Reports/bsh-2.0b4.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationTesting/HelpingArtifacts/libs/Reports/bson-3.0.4.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationTesting/HelpingArtifacts/libs/Reports/freemarker-2.3.23.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationTesting/HelpingArtifacts/libs/Reports/hamcrest-core-1.1.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationTesting/HelpingArtifacts/libs/Reports/jcommander-1.48.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationTesting/HelpingArtifacts/libs/Reports/jsoup-1.8.3.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationTesting/HelpingArtifacts/libs/Reports/junit-4.10.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationTesting/HelpingArtifacts/libs/Reports/mongodb-driver-3.0.4.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationTesting/HelpingArtifacts/libs/Reports/mongodb-driver-core-3.0.4.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationTesting/HelpingArtifacts/libs/Reports/snakeyaml-1.15.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationTesting/HelpingArtifacts/libs/Reports/sqlite-jdbc-3.8.11.1.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationTesting/HelpingArtifacts/libs/Reports/testng-6.9.9.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

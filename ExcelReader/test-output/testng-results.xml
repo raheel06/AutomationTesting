@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="761" started-at="2018-11-29T07:18:14Z" finished-at="2018-11-29T07:18:15Z">
+  <suite name="Suite" duration-ms="1168" started-at="2018-12-01T19:36:12Z" finished-at="2018-12-01T19:36:13Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="761" started-at="2018-11-29T07:18:14Z" finished-at="2018-11-29T07:18:15Z">
-      <class name="readExcel">
-        <test-method status="PASS" signature="excel(java.lang.String, java.lang.String)[pri:0, instance:readExcel@8bd1b6a]" name="excel" duration-ms="64" started-at="2018-11-29T07:18:15Z" data-provider="getTestData" finished-at="2018-11-29T07:18:15Z">
+    <test name="Test" duration-ms="1168" started-at="2018-12-01T19:36:12Z" finished-at="2018-12-01T19:36:13Z">
+      <class name="com.test.excelDataProvider">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.test.excelDataProvider@42e26948]" name="beforeClass" is-config="true" duration-ms="180" started-at="2018-12-01T19:36:12Z" finished-at="2018-12-01T19:36:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="NormalEstabEntryPermitTourism1(int, int)[pri:0, instance:com.test.excelDataProvider@42e26948]" name="NormalEstabEntryPermitTourism1" duration-ms="695" started-at="2018-12-01T19:36:12Z" finished-at="2018-12-01T19:36:13Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[01_EstabLogin]]>
+                <![CDATA[1]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[]]>
+                <![CDATA[3]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- excel -->
-        <test-method status="PASS" signature="excel(java.lang.String, java.lang.String)[pri:0, instance:readExcel@8bd1b6a]" name="excel" duration-ms="46" started-at="2018-11-29T07:18:15Z" data-provider="getTestData" finished-at="2018-11-29T07:18:15Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[02_NormalEstabEntryPermitTourism_SingleEntry_30Days]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[New Tourism Entry Permit]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- NormalEstabEntryPermitTourism1 -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.excelDataProvider@42e26948]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-12-01T19:36:12Z" finished-at="2018-12-01T19:36:12Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- excel -->
-      </class> <!-- readExcel -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.excelDataProvider@42e26948]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-12-01T19:36:13Z" finished-at="2018-12-01T19:36:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.test.excelDataProvider@42e26948]" name="afterClass" is-config="true" duration-ms="269" started-at="2018-12-01T19:36:13Z" finished-at="2018-12-01T19:36:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.test.excelDataProvider -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
