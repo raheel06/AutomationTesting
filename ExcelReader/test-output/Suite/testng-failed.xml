@@ -9,10 +9,9 @@
       <class name="com.test.excelDataProvider">
         <methods>
           <include name="afterClass"/>
-          <include name="excel"/>
           <include name="beforeClass"/>
           <include name="beforeMethod"/>
-          <include name="beforeTest"/>
+          <include name="NormalEstabEntryPermitTourism"/>
           <include name="afterMethod"/>
         </methods>
       </class> <!-- com.test.excelDataProvider -->

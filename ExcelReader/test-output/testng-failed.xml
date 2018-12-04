@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="password" value="Rao"/>
+    <parameter name="url" value="https://ospqmgfe1.emaratech.ae/SmartChannels_Th/Login.aspx"/>
+    <parameter name="username" value="Raheel"/>
     <classes>
       <class name="com.test.excelDataProvider">
         <methods>
           <include name="afterClass"/>
           <include name="beforeClass"/>
           <include name="beforeMethod"/>
-          <include name="NormalEstabEntryPermitTourism1"/>
+          <include name="NormalEstabEntryPermitTourism"/>
           <include name="afterMethod"/>
         </methods>
       </class> <!-- com.test.excelDataProvider -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

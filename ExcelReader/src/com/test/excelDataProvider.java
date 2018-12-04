@@ -46,10 +46,30 @@ public class excelDataProvider {
     public void afterMethod() throws Exception {
     }
 
-/*    @DataProvider
+    @DataProvider
 	public Iterator<Object[]> getTestData(){
+		int s= 1, e=1;
 		ArrayList<Object[]> testData=FullExcelReader.xlSheetReader(".\\testData\\DataSheet.xlsx");
-		testData.remove(0);
+
+		System.out.println(	testData.size());
+		
+		
+//		testData.remove(0);
+
+		for (int i=testData.size()-1; i>e;i--) {
+			testData.remove(i);
+			System.out.println(	testData.size());
+		}
+		
+		for (int i=0; i<s;i++) {
+			testData.remove(0);
+			System.out.println(	testData.size());
+		}
+
+
+		
+		
+		
 		return testData.iterator();
 	}
 
@@ -64,7 +84,6 @@ public class excelDataProvider {
 		System.out.println(ServiceName);
 		htmlReport.test.log(LogStatus.PASS, TestCaseName);
 	}
-*/
 
 /*If you want to execute specific rows
  * 
