@@ -48,7 +48,7 @@ public class excelDataProvider {
 
     @DataProvider
 	public Iterator<Object[]> getTestData(){
-		int s= 1, e=1;
+		int s= 1, e=4;
 		ArrayList<Object[]> testData=FullExcelReader.xlSheetReader(".\\testData\\DataSheet.xlsx");
 
 		System.out.println(	testData.size());
@@ -80,6 +80,7 @@ public class excelDataProvider {
 		if(ServiceName.contains("TestCase3")) {
 			System.out.println("This is test case 3 testing");			
 		}
+		
 		System.out.println(TestCaseName);
 		System.out.println(ServiceName);
 		htmlReport.test.log(LogStatus.PASS, TestCaseName);

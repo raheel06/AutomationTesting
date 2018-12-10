@@ -33,6 +33,9 @@ public class FullExcelReader {
 	            for(Cell cell: row) {
 	                String cellValue = dataFormatter.formatCellValue(cell);
 	                //System.out.print(cellValue + "\t");
+	                if(cellValue.isEmpty()){
+	                	cellValue="null";
+	                }
 	                rowData.add(cellValue);
 	            }
 	            tableData.add(rowData.toArray());
