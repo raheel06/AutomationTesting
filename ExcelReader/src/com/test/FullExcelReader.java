@@ -19,7 +19,7 @@ public class FullExcelReader {
 	public static ArrayList<Object[]> xlSheetReader(String xlPath) {
 		final String SAMPLE_XLSX_FILE_PATH = xlPath;
 		ArrayList<Object[]> tableData = new ArrayList<Object[]>();
-				
+		
 		try {
 			Workbook workbook = WorkbookFactory.create(new File(SAMPLE_XLSX_FILE_PATH));			
 			Sheet sheet = workbook.getSheetAt(0);
@@ -79,6 +79,7 @@ public class FullExcelReader {
 			Workbook workbook = WorkbookFactory.create(new File(SAMPLE_XLSX_FILE_PATH));			
 			Sheet sheet = workbook.getSheetAt(0);
 			DataFormatter dataFormatter = new DataFormatter();
+			
 			Row row= sheet.getRow(rowNum);
 			
         	for(Cell cell: row) {
@@ -95,4 +96,47 @@ public class FullExcelReader {
 		return null;
 	
 	}
+	
+	public static List<Object> xlRowReaderWithName(String xlPath, String TC_Name) {
+		final String SAMPLE_XLSX_FILE_PATH = xlPath;
+		
+		try {
+			List<Object> rowData = new ArrayList<Object>();
+            
+			Workbook workbook = WorkbookFactory.create(new File(SAMPLE_XLSX_FILE_PATH));			
+			Sheet sheet = workbook.getSheetAt(0);
+			DataFormatter dataFormatter = new DataFormatter();
+			
+//			for (Row row: sheet) {
+//	            for(Cell cell: row) {
+//	                String cellValue = dataFormatter.formatCellValue(cell);
+//	                if(cellValue.equalsIgnoreCase(TC_Name)){
+//	                	rowNum = row.getRowNum();
+//	                }
+//	            }
+//	        }
+			int rowNum = 1;
+			for (Row row: sheet) {
+				if(row.getCell(0).getStringCellValue().equalsIgnoreCase(TC_Name)){
+					rowNum = row.getRowNum();
+					break;
+				}
+			}
+            System.out.println(rowNum);
+
+            Row row= sheet.getRow(rowNum);
+        	for(Cell cell: row) {
+                String cellValue = dataFormatter.formatCellValue(cell);
+                //System.out.print(cellValue + "\t");
+                rowData.add(cellValue);
+            }
+        	return rowData;
+		}
+		catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+		return null;
+	
+	}	
 }

@@ -3,7 +3,9 @@ package com.test;
 //import java.util.ArrayList;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DataFormatter;
@@ -73,7 +75,7 @@ public class excelDataProvider {
 		return testData.iterator();
 	}
 
-	@Test(dataProvider="getTestData")
+	/*@Test(dataProvider="getTestData")
 	public void NormalEstabEntryPermitTourism(String TestCaseName, String ServiceName) throws Exception {		
 		//ArrayList<Object[]> testData=FullExcelReader.xlSheetReader(".\\testData\\DataSheet.xlsx");
 		//ArrayList<Object> mydate = new ArrayList<Object>();
@@ -85,15 +87,20 @@ public class excelDataProvider {
 		System.out.println(ServiceName);
 		htmlReport.test.log(LogStatus.PASS, TestCaseName);
 	}
-
-/*If you want to execute specific rows
- * 
- * 	@Test
+*/
+		
+	
+	
+	
+	
+	
+//If you want to execute specific rows
+ 	@Test
 	public void NormalEstabEntryPermitTourism() throws Exception {
 		String TestCaseName;
 		String ServiceName;
-
-		List<Object> row = FullExcelReader.xlRowReader(".\\testData\\DataSheet.xlsx",1);
+		
+		List<Object> row = FullExcelReader.xlRowReaderWithName(".\\testData\\DataSheet.xlsx","T02_Normal");
 		TestCaseName= row.get(0).toString();
 		ServiceName= row.get(1).toString();
 	    
@@ -106,7 +113,8 @@ public class excelDataProvider {
 		htmlReport.test.log(LogStatus.PASS, TestCaseName);
 	}
 
-    
+ 	
+/*    
 	@Parameters({"startTestCaseRow","endTestCaseRow"})    
 	@Test
 	public void NormalEstabEntryPermitTourism1(int startTestCaseRow, int endTestCaseRow) throws Exception {
