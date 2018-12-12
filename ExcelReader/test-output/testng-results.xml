@@ -1,45 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="761" started-at="2018-11-29T07:18:14Z" finished-at="2018-11-29T07:18:15Z">
+  <suite name="Default suite" duration-ms="1008" started-at="2018-12-12T19:34:45Z" finished-at="2018-12-12T19:34:46Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="761" started-at="2018-11-29T07:18:14Z" finished-at="2018-11-29T07:18:15Z">
-      <class name="readExcel">
-        <test-method status="PASS" signature="excel(java.lang.String, java.lang.String)[pri:0, instance:readExcel@8bd1b6a]" name="excel" duration-ms="64" started-at="2018-11-29T07:18:15Z" data-provider="getTestData" finished-at="2018-11-29T07:18:15Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[01_EstabLogin]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-          </params>
+    <test name="Default test" duration-ms="1008" started-at="2018-12-12T19:34:45Z" finished-at="2018-12-12T19:34:46Z">
+      <class name="com.test.excelDataProvider">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.test.excelDataProvider@39c0f4a]" name="beforeClass" is-config="true" duration-ms="179" started-at="2018-12-12T19:34:45Z" finished-at="2018-12-12T19:34:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- excel -->
-        <test-method status="PASS" signature="excel(java.lang.String, java.lang.String)[pri:0, instance:readExcel@8bd1b6a]" name="excel" duration-ms="46" started-at="2018-11-29T07:18:15Z" data-provider="getTestData" finished-at="2018-11-29T07:18:15Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[02_NormalEstabEntryPermitTourism_SingleEntry_30Days]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[New Tourism Entry Permit]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.excelDataProvider@39c0f4a]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2018-12-12T19:34:45Z" finished-at="2018-12-12T19:34:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- excel -->
-      </class> <!-- readExcel -->
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="NormalEstabEntryPermitTourism()[pri:0, instance:com.test.excelDataProvider@39c0f4a]" name="NormalEstabEntryPermitTourism" duration-ms="565" started-at="2018-12-12T19:34:45Z" finished-at="2018-12-12T19:34:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NormalEstabEntryPermitTourism -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.excelDataProvider@39c0f4a]" name="afterMethod" is-config="true" duration-ms="1" started-at="2018-12-12T19:34:45Z" finished-at="2018-12-12T19:34:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.test.excelDataProvider@39c0f4a]" name="afterClass" is-config="true" duration-ms="243" started-at="2018-12-12T19:34:45Z" finished-at="2018-12-12T19:34:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.test.excelDataProvider -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
