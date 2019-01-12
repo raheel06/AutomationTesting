@@ -14,8 +14,33 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
-public class FullExcelReader {
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+public class FullExcelReader {
+	private static XSSFSheet ExcelWSheet;
+	private static XSSFWorkbook ExcelWBook;
+	private static XSSFCell Cell;
+	private static XSSFRow Row;
+	
+	
+	//This method reads the test data from the Excel cell.
+	//We are passing row number and column number as parameters.
+	public static String getCellData(int RowNum, int ColNum) {
+		try {
+			Cell = ExcelWSheet.getRow(RowNum).getCell(ColNum);
+			DataFormatter formatter = new DataFormatter();
+			String cellData = formatter.formatCellValue(Cell);
+			return cellData;
+		} catch (Exception e) {
+			throw (e);
+		}
+	}
+
+	
+	
 	public static ArrayList<Object[]> xlSheetReader(String xlPath) {
 		final String SAMPLE_XLSX_FILE_PATH = xlPath;
 		ArrayList<Object[]> tableData = new ArrayList<Object[]>();

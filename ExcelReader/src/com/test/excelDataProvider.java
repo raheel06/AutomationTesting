@@ -54,8 +54,7 @@ public class excelDataProvider {
 		ArrayList<Object[]> testData=FullExcelReader.xlSheetReader(".\\testData\\DataSheet.xlsx");
 
 		System.out.println(	testData.size());
-		
-		
+				
 //		testData.remove(0);
 
 		for (int i=testData.size()-1; i>e;i--) {
@@ -68,10 +67,6 @@ public class excelDataProvider {
 			System.out.println(	testData.size());
 		}
 
-
-		
-		
-		
 		return testData.iterator();
 	}
 
