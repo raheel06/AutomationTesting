@@ -48,10 +48,67 @@ public class excelDataProvider {
     public void afterMethod() throws Exception {
     }
 
+
+    @DataProvider(name="EntryPermit")
+	public Iterator<Object[]> getFullTestData(){
+		int start= GetData.TestCase_Start, end=GetData.TestCase_End;
+		
+		ArrayList<Object[]> tableData = new ArrayList<Object[]>();
+//		ArrayList<Integer> tableData = new ArrayList<Integer>();
+		
+		for (int rowNum=start; rowNum <= end; rowNum++) {
+        	List<Object> rowData = new ArrayList<Object>();
+        	rowData.add(rowNum);
+        	tableData.add(rowData.toArray());
+        }
+		System.out.println("Total Test Case selected for Execution: "+	tableData.size());
+		return tableData.iterator();
+	}
+    
+    
+	@Test(dataProvider="EntryPermit")
+	public void NormalEstabEntryPermitTourism1(int TestCaseRow) throws Exception {
+		String TestCaseName;
+		String ServiceName;
+		System.out.println(TestCaseRow);
+		GetData.fnSetTestSheet(GetData.File_TestData);
+		GetData.fnTestDataRowWise(TestCaseRow);
+		
+//		System.out.println(startTestCaseRow);
+//		System.out.println(endTestCaseRow);
+
+/*		for(int i=startTestCaseRow; i<= endTestCaseRow;i++) {
+			List<Object> row = ExcelReader.xlRowReader(".\\testData\\DataSheet.xlsx",i);
+			TestCaseName= row.get(Constants.TestCaseName).toString();
+			ServiceName= row.get(Constants.ServiceName).toString();
+			
+			if(ServiceName.contains("TestCase3")) {
+				System.out.println("This is test case 3 testing");			
+			}
+			*/
+//			System.out.println(TestCaseName);
+			System.out.println(GetData.Col_ServiceName);
+//			htmlReport.test.log(LogStatus.FAIL, TestCaseName);
+		//}	
+	}
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     @DataProvider
 	public Iterator<Object[]> getTestData(){
 		int s= 1, e=4;
-		ArrayList<Object[]> testData=FullExcelReader.xlSheetReader(".\\testData\\DataSheet.xlsx");
+		ArrayList<Object[]> testData=ExcelReader.xlSheetReader(".\\testData\\DataSheet.xlsx");
 
 		System.out.println(	testData.size());
 				
@@ -72,7 +129,7 @@ public class excelDataProvider {
 
 	/*@Test(dataProvider="getTestData")
 	public void NormalEstabEntryPermitTourism(String TestCaseName, String ServiceName) throws Exception {		
-		//ArrayList<Object[]> testData=FullExcelReader.xlSheetReader(".\\testData\\DataSheet.xlsx");
+		//ArrayList<Object[]> testData=ExcelReader.xlSheetReader(".\\testData\\DataSheet.xlsx");
 		//ArrayList<Object> mydate = new ArrayList<Object>();
 		if(ServiceName.contains("TestCase3")) {
 			System.out.println("This is test case 3 testing");			
@@ -90,12 +147,12 @@ public class excelDataProvider {
 	
 	
 //If you want to execute specific rows
- 	@Test
+/* 	@Test
 	public void NormalEstabEntryPermitTourism() throws Exception {
 		String TestCaseName;
 		String ServiceName;
 		
-		List<Object> row = FullExcelReader.xlRowReaderWithName(".\\testData\\DataSheet.xlsx","T02_Normal");
+		List<Object> row = ExcelReader.xlRowReaderWithName(".\\testData\\DataSheet.xlsx","T02_Normal");
 		TestCaseName= row.get(0).toString();
 		ServiceName= row.get(1).toString();
 	    
@@ -106,11 +163,11 @@ public class excelDataProvider {
 		System.out.println(TestCaseName);
 		System.out.println(ServiceName);
 		htmlReport.test.log(LogStatus.PASS, TestCaseName);
-	}
+	}*/
 
  	
-/*    
-	@Parameters({"startTestCaseRow","endTestCaseRow"})    
+    
+/*	@Parameters({"startTestCaseRow","endTestCaseRow"})    
 	@Test
 	public void NormalEstabEntryPermitTourism1(int startTestCaseRow, int endTestCaseRow) throws Exception {
 		String TestCaseName;
@@ -119,7 +176,7 @@ public class excelDataProvider {
 		System.out.println(endTestCaseRow);
 
 		for(int i=startTestCaseRow; i<= endTestCaseRow;i++) {
-			List<Object> row = FullExcelReader.xlRowReader(".\\testData\\DataSheet.xlsx",i);
+			List<Object> row = ExcelReader.xlRowReader(".\\testData\\DataSheet.xlsx",i);
 			TestCaseName= row.get(Constants.TestCaseName).toString();
 			ServiceName= row.get(Constants.ServiceName).toString();
 			
@@ -131,8 +188,8 @@ public class excelDataProvider {
 			htmlReport.test.log(LogStatus.FAIL, TestCaseName);
 		}	
 	}
-	
 */	
+	
     
     
 	@BeforeClass

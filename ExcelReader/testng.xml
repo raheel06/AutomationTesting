@@ -3,9 +3,9 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
 
-    <parameter name="url" value="https://ospqmgfe1.emaratech.ae/SmartChannels_Th/Login.aspx" />
+<!--     <parameter name="url" value="https://ospqmgfe1.emaratech.ae/SmartChannels_Th/Login.aspx" />
     <parameter name="username" value="Raheel" />
-	<parameter name="password" value="Rao" />
+	<parameter name="password" value="Rao" /> -->
 
 <!-- 	<parameter name="startTestCaseRow" value="1" /> -->
 <!-- 	<parameter name="endTestCaseRow" value="3" /> -->

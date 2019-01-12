@@ -19,7 +19,7 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class FullExcelReader {
+public class ExcelReader {
 	private static XSSFSheet ExcelWSheet;
 	private static XSSFWorkbook ExcelWBook;
 	private static XSSFCell Cell;
@@ -39,6 +39,37 @@ public class FullExcelReader {
 		}
 	}
 
+
+	
+	public static ArrayList<Object[]> xlSheetColumnReader(String xlPath) {
+		final String SAMPLE_XLSX_FILE_PATH = xlPath;
+		ArrayList<Object[]> tableData = new ArrayList<Object[]>();
+		
+		try {
+			Workbook workbook = WorkbookFactory.create(new File(SAMPLE_XLSX_FILE_PATH));			
+			Sheet sheet = workbook.getSheetAt(0);
+			DataFormatter dataFormatter = new DataFormatter();
+
+	        for (Row row: sheet) {
+	        	List<Object> rowData = new ArrayList<Object>();
+	        		Cell cell;
+	        		cell= row.getCell(0);
+	                String cellValue = dataFormatter.formatCellValue(cell);
+	                //System.out.print(cellValue + "\t");
+	                if(cellValue.isEmpty()){
+	                	cellValue="null";
+	                }
+	                rowData.add(cellValue);
+	            tableData.add(rowData.toArray());
+	        }
+	        return tableData;
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		return null;
+	}
+
+	
 	
 	
 	public static ArrayList<Object[]> xlSheetReader(String xlPath) {
