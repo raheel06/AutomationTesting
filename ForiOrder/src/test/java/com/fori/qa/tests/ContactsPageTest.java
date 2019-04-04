@@ -3,7 +3,7 @@
  * 
  */
 
-package com.crm.qa.testcases;
+package com.fori.qa.tests;
 
 import java.io.IOException;
 

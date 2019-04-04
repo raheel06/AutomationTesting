@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="FREE CRM Application Test Automation Test Suite">
-	<test name="Free CRM App Test Cases">
+
+<!-- TestNG Documentation: http://testng.org/doc/documentation-main.html -->
+<!-- Change "false" to "tests", "methods", "classes" or "instances" for running in parallel. See more details in the TestNG documentation. -->
+
+<suite name="Vision" thread-count="2" parallel="methods">
+  <test name="Vision">
 		<classes>
-			<class name="com.crm.qa.testcases.LoginPageTest"></class>
-			<class name="com.crm.qa.testcases.HomePageTest"></class>
-			
+			<class name="com.fori.qa.tests.AdminLoginPageTest"></class>
+			<!-- <class name="com.fori.qa.tests.HomePageTest"></class> -->
 		</classes>
-	</test>
+  </test>
 </suite>

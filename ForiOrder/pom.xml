@@ -2,19 +2,22 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>FreeCRMTestAutomation</groupId>
-	<artifactId>FreeCRMTest</artifactId>
+	<groupId>ForiOrder</groupId>
+	<artifactId>ForiOrderTest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>FreeCRMTest</name>
+	<name>ForiOrderTest</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		 <maven.compiler.source>1.6</maven.compiler.source>
-                  <maven.compiler.target>1.6</maven.compiler.target>
+		<maven.compiler.source>1.6</maven.compiler.source>
+		<maven.compiler.target>1.6</maven.compiler.target>
+        <test.src.dir>src/test/java</test.src.dir>
 	</properties>
+
+
 
 	<dependencies>
 
@@ -28,10 +31,23 @@
 		
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
-		    <groupId>org.testng</groupId>
-		    <artifactId>testng</artifactId>
-		    <version>6.14.3</version>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.14.3</version>
 		    <scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>3.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1.1</version>
 		</dependency>
 		
 		<!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
@@ -100,4 +116,128 @@
 
 
 	</dependencies>
+	
+	
+	<repositories>
+		<!--<repository> <id>Your repository's ID</id> <name>Your repository's 
+			name</name> <url>URL of the repository containing the LeanFT jar files</url> 
+			</repository> -->
+	</repositories>
+	
+	
+	
+<!-- 	<build>
+		<testSourceDirectory>src/test/java</testSourceDirectory>
+		<testSourceDirectory>${test.src.dir}</testSourceDirectory>
+		
+		
+		
+		<plugins>
+			Uncomment this section if you want to use the application model generator 
+				plugin
+			For details, see https://admhelp.microfocus.com/leanft/en/latest/HelpCenter/Content/HowTo/update-appModel.htm#hp-minitoc-item-3
+			<plugin>
+			<groupId>com.hpe.lft</groupId>
+			<artifactId>appmodel-generator-mojo</artifactId>
+			<version>14.51.0</version>
+			<executions>
+			<execution>
+			<phase>validate</phase>
+			<goals>
+			<goal>generate</goal>
+			</goals>
+			</execution>
+			<configuration>
+			</configuration>
+			</executions>
+			</plugin>
+			
+			<plugin>
+			  	<groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-surefire-plugin</artifactId>
+			    <version>2.19.1</version>
+			    <configuration>
+			    	<suiteXmlFiles>
+			            <suiteXmlFile>testng.xml</suiteXmlFile>
+		          	</suiteXmlFiles>
+			    </configuration>
+	  		</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>1.10</version>
+				<executions>
+					<execution>
+						<id>add-source</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>appmodels</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+		
+		<pluginManagement>
+			<plugins>
+				This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself.
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.codehaus.mojo
+										</groupId>
+										<artifactId>
+											build-helper-maven-plugin
+										</artifactId>
+										<versionRange>
+											[1.10,)
+										</versionRange>
+										<goals>
+											<goal>add-source</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build> -->
+
+	<!-- <profiles>
+		<profile>
+			<id>HomePageTest</id>
+			<properties>
+				<test.src.dir>src/main/java</test.src.dir>
+			</properties>
+		</profile>
+	</profiles> -->
+	
 </project>

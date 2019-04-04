@@ -18,7 +18,7 @@ import com.fori.qa.util.WebEventListener;
 
 public class TestBase {
 	
-	public static WebDriver driver;
+	public WebDriver driver;
 	public static Properties prop;
 	public static EventFiringWebDriver e_driver;
 	public static WebEventListener eventListener;
@@ -36,7 +36,7 @@ public class TestBase {
 		}
 	}
 		
-	public static void initialization(){
+	public void initialization(){
 		String browserName = prop.getProperty("browser");		
 		if(browserName.equals("chrome")){
 			System.setProperty("webdriver.chrome.driver", "D:\\AutomationTesting\\HelpingArtifacts\\chromedriver_win32\\chromedriver.exe");	

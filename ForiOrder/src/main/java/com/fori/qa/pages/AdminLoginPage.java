@@ -57,7 +57,7 @@ public class AdminLoginPage extends TestBase{
 		if(msgwelcome.isDisplayed()) {
 			username.sendKeys(un);
 			password.sendKeys(pwd);
-			loginBtn.click();
+			//loginBtn.click();
 		}
 		//return account.isDisplayed();
 		return new HomePage();

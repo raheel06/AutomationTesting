@@ -1,4 +1,4 @@
-package com.crm.qa.testcases;
+package com.fori.qa.tests;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -9,11 +9,11 @@ import com.fori.qa.base.TestBase;
 import com.fori.qa.pages.HomePage;
 import com.fori.qa.pages.AdminLoginPage;
 
-public class AdminLoginPageTest extends TestBase{
+public class CustomerLoginPageTest extends TestBase{
 	AdminLoginPage loginPage;
 	HomePage homePage;
 	
-	public AdminLoginPageTest(){
+	public CustomerLoginPageTest(){
 		super();
 	}
 	

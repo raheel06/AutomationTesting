@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [ForiOrder Application Test Automation Test Suite]">
-  <listeners>
-    <listener class-name="com.qa.ExtentReportListener.ExtentReporterNG"/>
-  </listeners>
-  <test thread-count="5" name="ForiOrder App Test Cases(failed)">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Vision]" parallel="methods">
+  <test thread-count="2" name="Vision(failed)" parallel="methods">
     <classes>
-      <class name="com.crm.qa.testcases.LoginPageTest">
+      <class name="com.fori.qa.tests.AdminLoginPageTest">
         <methods>
-          <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="LogoImageTest"/>
           <include name="loginTest"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- com.crm.qa.testcases.LoginPageTest -->
+      </class> <!-- com.fori.qa.tests.AdminLoginPageTest -->
     </classes>
-  </test> <!-- ForiOrder App Test Cases(failed) -->
-</suite> <!-- Failed suite [ForiOrder Application Test Automation Test Suite] -->
+  </test> <!-- Vision(failed) -->
+</suite> <!-- Failed suite [Vision] -->
