@@ -100,7 +100,7 @@ public class ExcelUtils {
 
 	public static void writeWorkbook(String FileName) throws Exception {
 
-		FileOutputStream fileOut = new FileOutputStream(Constant_EP.Path_TestData + FileName);
+		FileOutputStream fileOut = new FileOutputStream(GetData.Path_TestData + FileName);
 		ExcelWBook.write(fileOut);
 		// fileOut.flush();
 		fileOut.close();
